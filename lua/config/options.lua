@@ -4,6 +4,8 @@
 
 local opt = vim.opt
 
+opt.autowrite = false
+opt.list = false
 opt.relativenumber = false
 opt.shiftwidth = 4
 opt.tabstop = 4
