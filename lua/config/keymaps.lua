@@ -5,11 +5,7 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
-keymap.set("n", "x", '"_x') -- Delete single character without saving to clipboard
-keymap.set("n", "<C-a>", "gg<S-v>G") -- Select all
-keymap.set("n", "+", "<C-a>") -- Increment
-keymap.set("n", "-", "<C-x>") -- Decrement
-keymap.set("i", "<C-BS>", 'vb"_d', opts) -- Delete a word backwards (not worked)
-keymap.set("n", "<C-s>", "<Cmd>w<CR>") -- Save with Ctrl+s
-keymap.set("n", "<C-c>", "Y") -- Yank with Ctrl+c in normal mode
-keymap.set("v", "<C-c>", "Y") -- Yank with Ctrl+c in visual mode
+keymap.set("n", "x", '"_x', opts) -- Delete single character without saving to clipboard
+keymap.set("n", "<C-a>", "gg<S-v>G", opts) -- Select all
+keymap.set("n", "+", "<C-a>", opts) -- Increment
+keymap.set("n", "-", "<C-x>", opts) -- Decrement
